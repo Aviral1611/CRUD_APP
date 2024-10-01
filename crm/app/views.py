@@ -11,6 +11,9 @@ def home(request):
 
     return render(request,'app/index.html')
 
+
+
+
 #- Register a User
 
 
