@@ -2,7 +2,8 @@ from django.shortcuts import render,redirect
 from .forms import CreateUserForm, LoginForm
 from django.contrib.auth.models import auth
 from django.contrib.auth import authenticate
-
+from django.contrib.auth.decorators import login_required
+from .models import Customer
 
 def home(request):
 
@@ -45,7 +46,7 @@ def my_login(request):
             if user is not None:
                 auth.login(request, user)
 
-                # return redirect("")
+                return redirect("dashboard")
 
     context = {'form2':form}
 
@@ -54,7 +55,14 @@ def my_login(request):
 
 # -- dashboard
 
+@login_required(login_url='my-login')
+def dashboard(request):
 
+    my_customer = Customer.objects.all()
+
+    context = {'records': my_customer}
+
+    return render(request, 'app/dashboard.html',context=context)
 
 
 
