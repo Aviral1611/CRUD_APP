@@ -116,7 +116,16 @@ def one_record(request,pk):
     return render(request,'app/view-record.html',context = context)
 
 
+# delete a record
 
+@login_required(login_url='my-login')
+def delete_record(request,pk):
+
+    record = Customer.objects.get(id=pk)
+
+    record.delete()
+
+    return redirect('dashboard')
 
 
 
