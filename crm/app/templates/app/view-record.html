@@ -5,17 +5,17 @@
 
     <div class="card">
 
-        <strong>
-            <br>
-            &nbsp;
-            {{record.first_name|upper}}
-            {{record.last_name}}
+          <div class="card-body">
+            <i class="fa fa-user-circle-o" aria-hidden="true"></i> &nbsp;
+            <strong>
 
-        </strong>
-
-        <hr> 
-
-        <div class="card-body">
+                
+                {{record.first_name|upper}}
+                {{record.last_name}}
+    
+            </strong>
+    
+            <hr> 
             <p><strong>ID</strong> {{record.id}} </p>
             <p><strong>Email:</strong> {{record.email}}</p>
             <p><strong> Phone Number</strong> {{record.phone}}</p>
@@ -32,13 +32,13 @@
 
         <br>
 
-        <a href="{%url 'dashboard' %}" class="btn btn-secondary">Return</a>
+        <a href="{%url 'dashboard' %}" class="btn btn-secondary"> <i class="fa fa-arrow-left" aria-hidden="true"></i> Return </a>
         &nbsp;
 
-        <a href="{%url 'update-record' record.id %}" class="btn btn-info">Update Record</a>
+        <a href="{%url 'update-record' record.id %}" class="btn btn-info">Update Record <i class="fa fa-pencil" aria-hidden="true"></i></a>
         &nbsp;
 
-        <a href="{%url 'delete-record record.id' %}" class="btn btn-danger">Delete</a>
+        <a href="{%url 'delete-record' record.id %}" class="btn btn-danger">Delete <i class="fa fa-trash" aria-hidden="true"></i></a>
 
 
 
