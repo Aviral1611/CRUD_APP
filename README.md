@@ -1,7 +1,7 @@
 # Project Name
 
 ## Overview
-This project is a web application built using Django that allows users to manage customer records. Users can register, log in, create, update, view, and delete customer records. The application is designed to be simple and user-friendly, providing essential functionalities for managing customer data.
+This project is a web application built using Django that allows users to manage customer records. Users can register, log in, create, update, view, and delete customer records. The application is designed to be simple and user-friendly, providing essential functionalities for managing customer data with cool icons.
 
 ## Features
 - **User registration and authentication**
